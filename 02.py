@@ -11,7 +11,7 @@ def limit_to(grid, old_one, to_move):
 
 
 def main():
-    with open("02_input_real.txt") as f:
+    with open("inputs/02_input_real.txt") as f:
         nb_map = [[0, 0, 1, 0, 0], [0, 2, 3, 4, 0], [5, 6, 7, 8, 9], [0, 'A', 'B', 'C', 0], [0, 0, 'D', 0, 0]]
         test = {"U": (-1, 0), "D": (1, 0), "L": (0, -1), "R": (0, 1)}
         where_am_i = (2, 0)
@@ -20,6 +20,7 @@ def main():
             for direction in line:
                 where_am_i = limit_to(nb_map, where_am_i, test[direction])
             print(nb_map[where_am_i[0]][where_am_i[1]], end='')
+        print()
 
 if __name__ == '__main__':
     main()

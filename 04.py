@@ -13,7 +13,7 @@ def caesar_sipher(character, shift):
 
 
 def main2():
-    with open("04_input_real.txt") as f:
+    with open("inputs/04_input_real.txt") as f:
         rooms = [l.strip() for l in f.readlines()]
         for room in rooms:
             splitted = room.split('-')
@@ -25,7 +25,7 @@ def main2():
 
 def main():
     sum_id = 0
-    with open("04_input_real.txt") as f:
+    with open("inputs/04_input_real.txt") as f:
         rooms = [l.strip() for l in f.readlines()]
         for room in rooms:
             splitted = room.split('-')

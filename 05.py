@@ -1,5 +1,6 @@
 import hashlib
 
+
 def main():
     start_pass = "ugkcyxxp"
     start_index = 0
@@ -11,8 +12,8 @@ def main():
             digested = hashlib.md5((start_pass + str(start_index)).encode()).hexdigest()
             start_index += 1
         out[int(digested[5])] = digested[6]
-        print(out)
         start_index += 1
+    print("".join(out))
 
 if __name__ == '__main__':
     main()

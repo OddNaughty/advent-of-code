@@ -6,7 +6,7 @@ def choose_orientation(ori, prev):
 
 
 def main():
-    with open("01_input_real.txt") as f:
+    with open("inputs/01_input_real.txt") as f:
         test = [(1, 0), (0, 1), (-1, 0), (0, -1)]
         ori = 0
         visited = [(0, 0)]
@@ -22,15 +22,14 @@ def main():
             y, x = start
             for i in range(old_x + 1, x + 1):
                 if (y, i) in visited:
-                    print(y, i)
+                    print(abs(y) + abs(i))
                     return
                 visited.append((y, i))
             for i in range(old_y + 1, y):
                 if (i, x) in visited:
-                    print(i, x)
+                    print(abs(i) + abs(x))
                     return
                 visited.append((i, x))
-            print("Instruction: ", instruction, "\nWhere am i: ", start)
 
 if __name__ == '__main__':
     main()
